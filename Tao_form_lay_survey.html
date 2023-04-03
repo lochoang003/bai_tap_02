@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Market Research Survey</title>
+    <style type="text/css">
+        td{padding: 10px 50px }
+    </style>
+</head>
+<body>
+<form action="https://www.google.com/" method="post" >
+    <p>What is your age range?</p>
+    <select>
+        <option>18-24</option>
+        <option>25-34</option>
+        <option>35-50</option>
+        <option>50+</option>
+    </select>
+    <p>What is your yearly income range?</p>
+    <select>
+        <option>$0 -$25.00</option>
+        <option>$25.01 - $50.00</option>
+        <option>$50.01 - 100.00</option>
+        <option>100.00+</option>
+    </select>
+    <p>Gender Identity</p>
+    <input type="radio" name="qw">Male<br>
+    <input type="radio" name="qw">Female<br>
+    <input type="radio" name="qw">Nonbinary<br>
+    <input type="radio" name="qw">
+    Other<br>
+    <p>Which of the following products have your purchased in the last 2 months. Please check all that apply.</p>
+    <input type="checkbox" name="qe">Product 1<br>
+    <input type="checkbox" name="qe">Product 2<br>
+    <input type="checkbox" name="qe">Product 3<br>
+    <p>How often would you use our new product?</p>
+    <input type="radio" name="qwr">Daily<br>
+    <input type="radio" name="qwr">Weekly<br>
+    <input type="radio" name="qwr">Monthly<br>
+    <p>What would you pay for the new product?</p>
+    <p>$ <input type="number" name="Dollars" size="1" placeholder="Dollars" >.
+        $ <input type="number" name="cents" size="1" placeholder="cents" ></p>
+    <p>What features would you like to see in the new product.<br>
+        <textarea rows="4" cols="50" name="message"></textarea><br>
+    </p>
+    <p>
+        Please rate your level of agreement with the following statements.</p>
+    <table border="1">
+        <tr><h3>
+            <td></td>
+            <td>Strongly Disagree</td>
+            <td>Disagree</td>
+            <td>Agree</td>
+            <td>Strongly Agree</td>
+        </h3></tr>
+        <tr>
+            <td>Our products are priced fairly.</td>
+            <td ><center><input type="radio" name="t"><br> 1</center></td>
+            <td ><center><input type="radio" name="t"><br> 2</center></td>
+            <td ><center><input type="radio" name="t"><br> 3</center></td>
+            <td ><center><input type="radio" name="t"><br> 4</center></td>
+
+        </tr>
+        <tr>
+            <td>Our products are high quality.</td>
+            <td ><center><input type="radio" name="tw"><br> 1</center></td>
+            <td ><center><input type="radio" name="tw"><br> 2</center></td>
+            <td ><center><input type="radio" name="tw"><br> 3</center></td>
+            <td ><center><input type="radio" name="tw"><br> 4</center></td>
+
+        </tr>
+        <tr>
+            <td>You would recommend our product to a friend or coworker.</td>
+            <td ><center><input type="radio" name="tq"><br> 1</center></td>
+            <td ><center><input type="radio" name="tq"><br> 2</center></td>
+            <td ><center><input type="radio" name="tq"><br> 3</center></td>
+            <td ><center><input type="radio" name="tq"><br> 4</center></td>
+
+        </tr>
+    </table>
+    <input type="submit" value="submit" >
+
+</form>
+
+</body>
+</html>
