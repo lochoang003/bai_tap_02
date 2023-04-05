@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>May_tinh</title>
+</head>
+<body>
+<input type="number" id="nhaSo1">
+<input type="number" id="nhaSo2">
+
+<button onclick="cong()">+</button>
+<button onclick="tru()">-</button>
+<button onclick="nhan()">x</button>
+<button onclick="chia()">/</button>
+
+</body>
+</html>
+<script>
+    function cong() {
+        let so1=  document.getElementById("nhaSo1").value
+        let so2= document.getElementById("nhaSo2").value
+
+        let o1= parseInt(so1)
+        let o2 = parseInt(so2)
+        let tong= o1+o2
+        alert(tong)
+    }
+    function tru() {
+        let so1=  document.getElementById("nhaSo1").value
+        let so2= document.getElementById("nhaSo2").value
+
+        let o1= parseInt(so1)
+        let o2 = parseInt(so2)
+        let tong= o1-o2
+        alert(tong)
+    }
+    function nhan() {
+        let so1=  document.getElementById("nhaSo1").value
+        let so2= document.getElementById("nhaSo2").value
+
+        let o1= parseInt(so1)
+        let o2 = parseInt(so2)
+        let tong= o1*o2
+        alert(tong)
+    }
+
+
+    function chia() { let so1=  document.getElementById("nhaSo1").value
+        let so2= document.getElementById("nhaSo2").value
+
+        let o1= parseInt(so1)
+        let o2 = parseInt(so2)
+        let tong= o1/o2
+        alert(tong)
+
+
+    }
+</script>
