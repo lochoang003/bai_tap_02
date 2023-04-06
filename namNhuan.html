@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính năm nhuận</title>
+    <style>
+        table td th {
+        padding: 30px 30px;
+        }
+    </style>
+</head>
+<body>
+<center>
+    <table style="background: rosybrown;">
+        <tr>
+            <th colspan="2">kiểm tra năm nhuận</th>
+        </tr>
+        <tr>
+            <td><input type="number" placeholder="nhập năm" id="inPut"></td>
+            <td><button onclick="qw()">ok</button></td>
+        </tr>
+        <tr>
+            <td style="background: white;"><p id="qq"></p></td>
+        </tr>
+    </table>
+
+
+</center>
+</body>
+</html>
+<script>
+  function qw() {
+      let nam = document.getElementById("inPut").value
+      let n= parseInt(nam);
+   /*   if (n%4==0){
+          if ((n % 100 == 0) && (n % 400 !=0)){
+        document.getElementById("qq").innerHTML = nam + " là năm không nhuận";
+
+          }
+          else
+        document.getElementById("qq").innerHTML = nam + " là năm nhuận";
+
+      }
+      else
+        document.getElementById("qq").innerHTML = nam + " là năm không nhuận";
+
+
+  }*/
+
+       if (((nam %4 ==0) && (nam %100 !=0)) || (nam %400 ==0))
+         document.getElementById("qq").innerHTML = nam + " là năm nhuận";
+    else {
+        document.getElementById("qq").innerHTML = nam + " là năm không nhuận";
+    }
+  }
+
+
+
+
+
+
+</script>

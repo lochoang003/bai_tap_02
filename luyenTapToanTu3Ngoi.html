@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Toán tử 3 ngôi</title>
+</head>
+<body>
+<button onclick="bai1()"> bài 1</button>
+<button onclick="bai2()"> bài 2</button>
+
+</body>
+</html>
+<script>
+   function bai1() {
+       let so1= parseInt(prompt("nhập số a"))
+       let so2= parseInt(prompt("nhập số b"))
+
+       let so3 = so1+so2
+       if ((so3)<4){
+           alert(so3 + " < 4")
+       }
+       else
+           alert(so3 + " > 4")
+   }
+   function bai2() {
+       let giaTri = prompt("nhập giá trị")
+       if (giaTri == "Employee"){
+           alert("halo")
+       }else if (giaTri == "Director"){
+           alert("Greetings")
+       }else if (giaTri == ""){
+           alert("No login")
+       }else {
+           alert("nhập lại")
+       }
+   }
+</script>

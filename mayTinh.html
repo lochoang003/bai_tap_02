@@ -3,17 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <title>May_tinh</title>
+    <style>
+        .a{
+            padding-block: 1%;
+        }
+    </style>
 </head>
 <body>
-<input type="number" id="nhaSo1">
-<input type="number" id="nhaSo2">
+<center>
+<table style="background: rosybrown;">
+    <tr>
+        <th colspan="2">máy tính</th>
 
-<button onclick="cong()">+</button>
-<button onclick="tru()">-</button>
-<button onclick="nhan()">x</button>
-<button onclick="chia()">/</button>
+    </tr>
+    <tr>
+      <td>  <input type="number" id="nhaSo1" placeholder="nhập số "></td>
+
+       <td> <input type="number" id="nhaSo2" placeholder=" nhập số"></td>
+    </tr>
+    <tr>
+
+        <td colspan="2"><center><button onclick="cong()">+</button>
+        <button onclick="tru()">-</button>
+        <button onclick="nhan()">x</button>
+        <button onclick="chia()">/</button>
+        </center></td>
+
+    </tr> <br>
+    <tr class="a">
+        <td style="background: white    ;" colspan="2"><p id="asq"></p></td>
+    </tr>
+</table>
+</center>
 
 </body>
+
+
 </html>
 <script>
     function cong() {
@@ -23,7 +48,7 @@
         let o1= parseInt(so1)
         let o2 = parseInt(so2)
         let tong= o1+o2
-        alert(tong)
+       document.getElementById("asq").innerHTML = "tổng =" + tong
     }
     function tru() {
         let so1=  document.getElementById("nhaSo1").value
@@ -32,7 +57,7 @@
         let o1= parseInt(so1)
         let o2 = parseInt(so2)
         let tong= o1-o2
-        alert(tong)
+        document.getElementById("asq").innerHTML = "hiệu =" + tong
     }
     function nhan() {
         let so1=  document.getElementById("nhaSo1").value
@@ -41,7 +66,7 @@
         let o1= parseInt(so1)
         let o2 = parseInt(so2)
         let tong= o1*o2
-        alert(tong)
+        document.getElementById("asq").innerHTML = "tích =" + tong
     }
 
 
@@ -51,7 +76,7 @@
         let o1= parseInt(so1)
         let o2 = parseInt(so2)
         let tong= o1/o2
-        alert(tong)
+        document.getElementById("asq").innerHTML = "thương =" + tong
 
 
     }

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập IF</title>
+</head>
+<body>
+<center>
+<table>
+  <tr>
+    <th colspan="2">bạn tính 1 + 1 = ?</th>
+  </tr>
+  <tr>
+    <td><input id="inPut" placeholder="đáp án của bạn"></td>
+    <td> <button onclick="ad()">Gửi</button> </td>
+  </tr>
+  <tr>
+    <td colspan="2"><p id="tr"></p></td>
+  </tr>
+</table>
+</center>
+</body>
+</html>
+<script>
+  function ad() {
+    let dapAn = document.getElementById("inPut").value
+    if ((dapAn == 2)||(dapAn == "hai")||(dapAn == "Hai")){
+      document.getElementById("tr").innerHTML = "trả lời chính xác"
+    }
+    else {
+      document.getElementById("tr").innerHTML = "trả lời sai"
+    }
+
+  }
+
+</script>

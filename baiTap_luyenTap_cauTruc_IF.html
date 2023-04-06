@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện Tập cấu trúc IF</title>
+</head>
+<body>
+<button onclick="bai1()">bài 1</button>
+<button onclick="bai2()">bài 2</button>
+<button onclick="bai3()">bài 3</button>
+<button onclick="bai4()">bài 4</button>
+<button onclick="bai5()">bài 5</button>
+<button onclick="bai6()">bài 6</button>
+<button onclick="bai7()">bài 7</button>
+</body>
+</html>
+<script>
+  function bai1() {
+    let a= parseInt(prompt("nhập số a"))
+    let b= parseInt(prompt("nhập số b"))
+    let c = a%b
+    let d = a/b
+    if (c == 0){
+
+      alert(" số "+ a + " chia hết cho số "+ b +"  thương = "+ d)
+    }
+    else  {
+
+      alert(" số "+ a + " không chia hết cho số "+ b +"  thương = "+ d)
+    }
+  }
+  function bai2() {
+    let tuoi= parseInt(prompt("nhập số tuổi"))
+    if ( tuoi>=13 && tuoi <16){
+      alert("bạn đủ điều kiện nhập học")
+    }else if (tuoi < 13){
+      alert("bạn chưa đủ tuổi")
+    }else{
+      alert("bạn đã quá tuổi")
+    }
+  }
+  function bai3() {
+    let nhapSO = parseInt(prompt("nhập 1 số nguyên"))
+    if (nhapSO > 0 ){
+      alert("số " + nhapSO +" lơn hơn 0")
+    }else if (nhapSO == 0 ){
+      alert ("số 0 = 0")
+    }else
+      alert ("số " + nhapSO + " nhỏ hơn 0")
+  }
+  function bai4() {
+    let soA= parseInt(prompt("nhập số a"))
+    let soB= parseInt(prompt("nhập số b"))
+    let soC= parseInt(prompt("nhập số c"))
+      if (soA>soB){
+        if (soA>soC){
+          alert(soA+" là số lớn nhất")
+        }else {
+          alert(soC+ " là số lớn nhất")
+        }
+      }else if (soB>soC){
+        alert(soB+ " là số lớn nhất")
+
+
+        }else {
+        alert(soC+ " là số lớn nhất")
+
+      }
+    }
+    function bai5() {
+    let soDiem1 = parseFloat(prompt("nhập điểm học kỳ I"))
+    let soDiem2 = parseFloat(prompt("nhập điểm học kỳ II"))
+    let soDiem = (soDiem1+soDiem2)/2
+      if (soDiem>= 7.5){
+        alert("điểm TB là " + soDiem +" học sinh giỏi")
+      }
+      else if ((soDiem<7.5) && (soDiem>= 6.5) ){
+        alert("điểm TB là " + soDiem +" học sinh khá")
+      }else if ((soDiem<6.5) && (soDiem >= 4.5)){
+        alert("điểm TB là " + soDiem +" học sinh TB")
+      }else{
+        alert("điểm TB là " + soDiem +" học sinh yếu kém")
+      }
+
+    }
+    function bai6() {
+    let soTien1 = parseFloat(prompt("nhập tiền nhập hàng"))
+    let soTien2 = parseFloat(prompt("nhập tiền bán hàng"))
+      let hoaHong = soTien2-soTien1
+    if (hoaHong >= 0){
+      alert("bạn đã lời " + hoaHong + " VND")
+    }else
+      alert("bạn đã lỗ " + hoaHong + "VND")
+
+    }
+    function bai7() {
+    let thoiGian= parseFloat(prompt("nhập tổng thời gian cuộc gọi 'tính theo phút' "))
+      let giaCuoc= thoiGian*3000
+      alert("thời gian bạn gọi là "+ thoiGian + " phút số tiền phải trả "+ giaCuoc + " VND")
+
+
+    }
+
+</script>
