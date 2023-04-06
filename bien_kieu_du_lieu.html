@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bien_kieu_du_lieu</title>
+</head>
+<body>
+<button type="button" onclick="diem_tb()">tính điểm TB </button>
+<button type="button"onclick="chuyendoido()">chuyển đổi độ</button>
+<button type="button"onclick="hinhTron()">chu vi,diện tích hình tròn</button>
+
+</body>
+</html>
+<script>
+  function diem_tb() {
+    inputLy = +prompt("điểm lý")
+    inputHoa = +prompt("điểm hóa")
+    inputSinh = +prompt("điểm sinh")
+    let ly = inputLy
+    let hoa = inputHoa
+    let sinh = inputSinh
+    document.write("điểm lý = " + ly + " điểm hóa = " + hoa + " điểm sinh = " + sinh)
+    document.write("<br>")
+    let tong = ly + hoa + sinh
+    let TB = tong / 3
+    document.write("tổng điểm = " + tong + " điểm trung bình = " + TB)
+  }
+  function chuyendoido(){
+    inputC = prompt("nhập độ C")
+    inputF = prompt("nhập độ F")
+    let C_F= parseFloat(inputC*1.8)+32
+    let F_C=parseFloat(inputF-32)/1.8
+    document.write(inputC+ "độ C = " +C_F + "độ F")
+    document.write("<br>")
+    document.write(inputF+ "độ F = " +F_C +"độ C")
+  }
+  function hinhTron(){
+    inputR = prompt("mời nhập r")
+    let r = parseFloat(inputR)
+    let C= 2*Math.PI*r
+    let S= Math.PI*Math.pow(r,2)
+    document.write("diện tích hình tròn =" + S)
+    document.write("<br>")
+    document.write("diện chu vi hình tròn =" + C)
+
+  }
+</script>
