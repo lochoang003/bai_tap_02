@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Máy tính đơn giản</title>
+  <style>
+    button {
+      width: 50px;
+      height: 50px;
+    }
+    input{
+      width: 96%;
+    }
+  </style>
+</head>
+<body>
+<center>
+  <table>
+    <tr>
+      <td colspan="4"> <input id="hienThi"></td>
+    </tr>
+    <tr>
+      <td><button onclick="so(1)">1</button> </td>
+      <td><button onclick="so(2)">2</button> </td>
+      <td><button onclick="so(3)">3</button> </td>
+      <td><button onclick="so('+')">+</button> </td>
+    </tr>
+<tr>
+      <td><button onclick="so(4)">4</button> </td>
+      <td><button onclick="so(5)">5</button> </td>
+      <td><button onclick="so(6)">6</button> </td>
+      <td><button onclick="so('-')">-</button> </td>
+    </tr>
+<tr>
+      <td><button onclick="so(7)">7</button> </td>
+      <td><button onclick="so(8)">8</button> </td>
+      <td><button onclick="so(9)">9</button> </td>
+      <td><button onclick="so('*')">x</button> </td>
+    </tr>
+<tr>
+      <td><button onclick="C()">C</button> </td>
+      <td><button onclick="so(0)">0</button> </td>
+      <td><button onclick="bang()">=</button> </td>
+      <td><button onclick="so('/')">/</button> </td>
+    </tr>
+
+  </table>
+</center>
+</body>
+</html>
+<script>
+  function C(){
+    let qw = document.getElementById("hienThi")
+      qw.value = ""
+  }
+  function so(q){
+    let qw = document.getElementById("hienThi")
+    qw.value= qw.value + q
+  }
+  function bang() {
+    let qw = document.getElementById("hienThi");
+    let valueB = qw.value;
+    qw.value = eval(valueB);
+
+  }
+
+</script>
