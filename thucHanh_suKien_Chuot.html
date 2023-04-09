@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thực hành sự kiện chuột</title>
+</head>
+<body>
+<form><!--
+    <img id="anh" src="https://haycafe.vn/wp-content/uploads/2022/02/Anh-gai-xinh-cap-2-3.jpg" width="300" height="350">
+    <p>ấn để di chuyển hình ảnh..</p>
+    <input type="button" value="ấn ấn" onclick="diChuyen()">
+    <br>-->
+    <img id="anhLan2" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsLcAWYvPQaGGMK2rFm2FFVNodwVg6gIK0-Q&usqp=CAU" style="width: 40%">
+    <br>
+    <input type="button" onclick="diChuenhoa()" value="di chuyển hoa">
+</form>
+</body>
+</html>
+<script>
+    let anhHoa = null;
+    anhHoa = document.getElementById("anhLan2");
+    function hoa() {
+        anhHoa.style.position = "relative";
+        anhHoa.style.left= "0px";
+
+    }
+    function diChuenhoa() {
+        anhHoa.style.left = parseInt(anhHoa.style.left) +10 +"px";
+    }
+    window.onload = hoa;
+  /*  let luuAnh= null;
+    luuAnh = document.getElementById("anh");
+    function init() {
+
+        luuAnh.style.position = "relative";
+        luuAnh.style.left= "0px";
+
+    }
+    function diChuyen() {
+        luuAnh.style.left= parseInt(luuAnh.style.left) +10 +"px";
+    }
+    window.onload = init;*/
+</script>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>lãi ngân hàng (lãi mẹ đẻ lãi con) </h1>
+<input type="number" id="soTien" placeholder="nhập số tiền gửi 'VND'"><br>
+<input type="number" id="soThang" placeholder="số tháng gửi"><br>
+<input type="number" id="phanTramLai" placeholder="lãi xuất">
+<button onclick="nganHang()">ok</button>
+<p id="laiXuat"></p>
+</body>
+</html>
+<script>
+    function nganHang() {
+        let tien = parseInt(   document.getElementById("soTien").value)
+        let inputLaiXuat= parseInt( document.getElementById("phanTramLai").value)
+        let thang = parseInt( document.getElementById("soThang").value)
+
+        let tienLai1 = tien*Math.pow((1+inputLaiXuat/100),thang)
+        let tienLai = parseInt(tienLai1)
+        document.getElementById("laiXuat").innerHTML =
+            "bạn gửi " + tien + " VND trong vòng "+ thang + " tháng với lãi xuất " + inputLaiXuat +
+            " số tiền nhận được là " + tienLai +" VND"
+
+
+    }
+
+</script>

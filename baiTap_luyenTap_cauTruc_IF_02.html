@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập IF 02</title>
+</head>
+<body>
+<button onclick="bai1()">bài 1</button>
+<button onclick="bai2()">bài 2</button>
+<button onclick="bai3()">bài 3</button>
+<button onclick="bai4()">bài 4</button>
+<button onclick="bai5()">bài 5</button>
+<button onclick="bai6()">bài 6</button>
+<button onclick="bai7()">bài 7</button>
+<button onclick="bai8()">bài 8</button>
+<button onclick="bai9()">bài 9</button>
+<button onclick="bai10()">bài 10</button>
+<button onclick="bai11()">bài 11</button>
+<button onclick="bai12()">bài 12</button>
+</body>
+</html>
+<script>
+    function bai1() {
+        document.write(
+            "<h1>Chuyển đổi nhiệt độ C F</h1>\n" +
+            "<input type=\"number\" placeholder=\"nhập độ\" id=\"nhapDo\">\n" +
+            "<select id=\"k1\">\n" +
+            "    <option value=\"1\">C</option>\n" +
+            "    <option value=\" 33.8\">F</option>\n" +
+            "</select>\n" +
+            "<select id=\"k2\">\n" +
+            "    <option value=\"1\">C</option>\n" +
+            "    <option value=\" 33.8\">F</option>\n" +
+            "</select>\n" +
+            "\n" +
+            "<button onclick=\"ok()\">ok</button>\n" +
+            "<p id=\"q21\"></p>"
+        )
+    }
+
+    function ok() {
+        let do1 = document.getElementById("nhapDo").value;
+        let c1 = document.getElementById("k1").value;
+        let c2 = document.getElementById("k2").value;
+        if (c1 == c2) {
+            document.getElementById("q21").innerHTML = do1;
+        } else if (c1 == 1 && c2 == 33.8) {
+            document.getElementById("q21").innerHTML = (c1 * 1.8 + 32)
+        } else
+            document.getElementById("q21").innerHTML = (c2 - 32) / 1.8
+
+
+    }
+
+    //bài 2
+    function bai2() {
+        document.write(
+            "<h1>Chuyển đổi từ mét sang feet</h1>\n" +
+            "<input type=\"number\" placeholder=\"nhập số\" id=\"nhapSo\">\n" +
+            "<select id=\"m1\">\n" +
+            "    <option value=1>mét</option>\n" +
+            "    <option value=3.2808>Feet</option>\n" +
+            "</select>\n" +
+            "<select id=\"m2\">\n" +
+            "    <option value=1>mét</option>\n" +
+            "    <option value=3.2808>Feet</option>\n" +
+            "</select>\n" +
+            "\n" +
+            "<button onclick=\"mf()\">ok</button>\n" +
+            "<p id=\"q22\"></p>"
+        )
+    }
+
+    function mf() {
+        let Doi = document.getElementById("nhapSo").value;
+        let m1 = document.getElementById("m1").value;
+        let f2 = document.getElementById("m2").value;
+        if (m1 == f2) {
+            document.getElementById("q22").innerHTML = Doi;
+        } else if ((m1 == 1) && (f2 == 3.2808)) {
+            document.getElementById("q22").innerHTML = Doi * 3.2808
+        } else
+            document.getElementById("q22").innerHTML = Doi / 3.2808
+
+
+    }
+
+    // bài 3
+    function bai3() {
+        document.write(
+            "<h1>Tính hình vuông</h1>\n" +
+            "<input type=\"number\"  placeholder=\"nhập cạnh hình vuông\" id=\"nhapCanh\">\n" +
+            "<button onclick=\"Vuong()\">ok</button>\n" +
+            "<p id=\"SC\"></p>\n" +
+            "<p id=\"SD\"></p>"
+        )
+    }
+
+    function Vuong() {
+        let canhb = document.getElementById("nhapCanh")
+        let canhA = canhb.value
+        let vuongc = canhA * canhA
+        let chuVi = canhA * 4
+        document.getElementById("SC").innerHTML =
+            "diện tích hình vuông là " + vuongc
+        document.getElementById("SD").innerHTML =
+            "chu vi hình vuông là " + chuVi
+    }
+
+    //bài 4
+    function bai4() {
+        document.write("" +
+            "<h1>Hình chữ nhật</h1>\n" +
+            "<input type=\"number\" id=\"canhDai\" placeholder=\"nhập cạnh dài \"><br>\n" +
+            "<input type=\"number\" id=\"canhNgan\" placeholder=\"nhập cạnh ngắn\"><br>\n" +
+            "<button onclick=\"so4()\">ok</button>\n" +
+            "<p id=\"Sn\"></p>\n" +
+            "<p id=\"CVn\"></p>")
+    }
+
+    function so4() {
+        let dai = +document.getElementById("canhDai").value
+        let ngan = +document.getElementById("canhNgan").value
+        let chuVi = (dai + ngan) * 2
+        let dienTich = dai * ngan
+        document.getElementById("Sn").innerHTML = "diện tích hình chữ nhật = " + dienTich
+        document.getElementById("CVn").innerHTML = "chu vi hình chữ nhật = " + chuVi
+    }
+
+    //bài 5
+    function bai5() {
+        document.write("" +
+            "<h1>Diện tích tam giác vuông</h1>\n" +
+            "<input type=\"number\" id=\"tamGiacA\" placeholder=\"nhập cạnh góc vuông a\"><br>\n" +
+            "<input type=\"number\" id=\"tamGiacB\" placeholder=\"nhập cạnh góc vuông b\"><br>\n" +
+            "<button onclick=\"tam()\">ok</button>\n" +
+            "<p id=\"tamGiac\"></p>\n" +
+            "<p id=\"tamGiac2\"></p>")
+    }
+
+    function tam() {
+        let a = +document.getElementById("tamGiacA").value
+        let b = +document.getElementById("tamGiacB").value
+        let StamGiac = a * b / 2
+        let c = Math.pow(a, 2) + Math.pow(b, 2)
+        let d = Math.sqrt(c)
+        let chuViTamGiac = a + b + d
+        document.getElementById("tamGiac").innerHTML = "Diện tích tam giác = " + StamGiac
+        document.getElementById("tamGiac2").innerHTML = "chu vi tam giác = " + chuViTamGiac
+    }
+
+    // bài 6
+    function bai6() {
+        document.write("<h1>Giải phương trình bậc 1</h1>\n" +
+            "<h3> ax + b = 0</h3>\n" +
+            "<input type=\"number\" id=\"soA\" placeholder=\"nhập số a\"><br>\n" +
+            "<input type=\"number\" id=\"soB\" placeholder=\"nhập số b\"><br>\n" +
+            "<button onclick=\"so6()\">ok</button>\n" +
+            "<p id=\"nghiem\"></p>")
+
+    }
+
+    function so6() {
+        let a = +document.getElementById("soA").value
+        let b = +document.getElementById("soB").value
+        if (a == 0) {
+            if (b == 0) {
+                document.getElementById("nghiem").innerHTML = " x vô số nghiệm"
+            } else {
+                document.getElementById("nghiem").innerHTML = "x vô nghiêm"
+            }
+        } else {
+            let x = -b / a
+            document.getElementById("nghiem").innerHTML = "phương trình có nghiệm x = " + x
+        }
+    }
+
+    // bài 7
+    function bai7() {
+        document.write("" +
+            "<h1>Phương trình bậc 2</h1>\n" +
+            "<h2> ax<sup>2</sup> + bx + c = 0 </h2>\n" +
+            "<input type=\"number\" placeholder=\"nhập số a \" id=\"soA\"><br>\n" +
+            "<input type=\"number\" placeholder=\"nhập số b \" id=\"soB\"><br>\n" +
+            "<input type=\"number\" placeholder=\"nhập số c \" id=\"soC\"><br>\n" +
+            "<button onclick=\"pt2()\">ok</button>\n" +
+            "<p id=\"nghiemx\"></p>\n")
+    }
+
+    function pt2() {
+        let a = +document.getElementById("soA").value
+        let b = +document.getElementById("soB").value
+        let c = +document.getElementById("soC").value
+        if (a != 0) {
+            let denTa = Math.pow(b, 2) - 4 * a * c
+            if (denTa < 0) {
+                document.getElementById("nghiemx").innerHTML = "phương trình vô nghiệm ."
+            } else if (denTa == 0) {
+                document.getElementById("nghiemx").innerHTML = " phương trình có nghiệm kép x1 = x2 = " + -b / (2 * a)
+            } else {
+                let x1 = ((-b + Math.sqrt(denTa)) / (2 * a))
+                let x2 = ((-b - Math.sqrt(denTa)) / (2 * a))
+                document.getElementById("nghiemx").innerHTML = "phương trình có 2 nghiệm x1 = " + x1 + " x2 = " + x2
+
+            }
+        } else {
+            document.getElementById("nghiemx").innerHTML = "nhập lại a ≠ 0 "
+        }
+    }
+
+    // bài 8
+    function bai8() {
+        document.write("" +
+            "<h1>kiểm tra số tuổi</h1>\n" +
+            "<input type=\"number\" id=\"nhapTuoi\" placeholder=\"nhập số tuổi\">\n" +
+            "<button onclick=\"sTuoi1()\">ok</button>\n" +
+            "<p id=\"hienTuoi\"></p>")
+    }
+
+    function sTuoi1() {
+        let nhap = document.getElementById("nhapTuoi").value
+        let Tuoi = parseInt(nhap)
+        if (Tuoi < 0) {
+            document.getElementById("hienTuoi").innerHTML = "bạn chưa được sinh ra"
+
+        } else if (Tuoi >= 0 && Tuoi < 18) {
+            document.getElementById("hienTuoi").innerHTML = "tuổi của bạn là " + Tuoi
+        } else if (Tuoi >= 18 && Tuoi < 65) {
+            document.getElementById("hienTuoi").innerHTML = "bạn đã " + Tuoi + " tuổi nằm trong độ tuổi lao động"
+        } else if (Tuoi >= 65 && Tuoi < 120) {
+            document.getElementById("hienTuoi").innerHTML = "bạn đã sống được " + Tuoi + " mùa bánh chưng"
+        } else {
+            document.getElementById("hienTuoi").innerHTML = "bạn là quái vật mời nhập lại "
+        }
+    }
+
+    function bai9() {
+        document.write("" +
+            "<h1>Kiểm tra 3 số a , b , c có phải là cạnh 1 tam giác k </h1>\n" +
+            "<input type=\"number\" id=\"canhA\" placeholder=\"nhập cạnh a \"><br>\n" +
+            "<input type=\"number\" id=\"canhB\" placeholder=\"nhập cạnh b \"><br>\n" +
+            "<input type=\"number\" id=\"canhC\" placeholder=\"nhập cạnh c \"><br>\n" +
+            "<button onclick=\"canh9()\">ok</button>\n" +
+            "<p id=\"tamGiac\"></p>")
+    }
+
+    function canh9() {
+        let a = +document.getElementById("canhA").value
+        let b = +document.getElementById("canhB").value
+        let c = +document.getElementById("canhC").value
+        /*a , b , c > 0 ?
+            (a + b > c ?
+                (b + c > a ?
+                    (a + c > b ? document.getElementById("tamGiac").innerHTML = "dung" :
+                            document.getElementById("tamGiac").innerHTML = "k"
+
+                    ) : document.getElementById("tamGiac").innerHTML = "k") :
+                document.getElementById("tamGiac").innerHTML = "k") :
+            document.getElementById("tamGiac").innerHTML = "k"*/
+
+        if ((a, b, c > 0) && (a + b > c) && (b + c > a) && (a + c > b)) {
+            document.getElementById("tamGiac").innerHTML = a + " , " + b + " , " + c + " là cạnh của tam giác"
+        } else {
+            document.getElementById("tamGiac").innerHTML = a + " , " + b + " , " + c + " không phải là cạnh của tam giác"
+        }
+
+    }
+
+    // bài 10
+    function bai10() {
+        document.write("" +
+            "<h1>Tính giá điện</h1>\n" +
+            "<p>từ 0 -> 50 giá 5k/số</p>\n" +
+            "<p>từ 50 -> 100 giá 6k/số</p>\n" +
+            "<p>từ 100 -> 1000 giá 7k/số</p>\n" +
+            "<p>từ 1000 -> giá 8k/số</p>\n" +
+            "<input type=\"number\" id=\"soDien\" placeholder=\"nhập số điện\">\n" +
+            "<button onclick=\"diEn()\">ok</button>\n" +
+            "<p id=\"hienDien\"></p>")
+    }
+
+    function diEn() {
+        let inputDien = +document.getElementById("soDien").value
+        if (inputDien <= 0) {
+            document.getElementById("hienDien").innerHTML = "nhập lại"
+        } else if (inputDien > 0 && inputDien <= 50) {
+            document.getElementById("hienDien").innerHTML = "số điện bạn dùng là " + inputDien + " kW số tiền phải trả là " + inputDien * 5 + "k VND"
+        } else if (inputDien > 50 && inputDien <= 100) {
+            document.getElementById("hienDien").innerHTML = "số điện bạn dùng là " + inputDien + " kW số tiền phải trả là " + inputDien * 6 + "k VND"
+        } else if (inputDien > 100 && inputDien <= 1000) {
+            document.getElementById("hienDien").innerHTML = "số điện bạn dùng là " + inputDien + " kW số tiền phải trả là " + inputDien * 7 + "k VND"
+        } else {
+            document.getElementById("hienDien").innerHTML = "số điện bạn dùng là " + inputDien + " kW số tiền phải trả là " + inputDien * 8 + "k VND"
+        }
+    }
+
+    // bài 11
+    function bai11() {
+        document.write("" +
+            "<h1>thuế thu nhập cá nhân </h1>\n" +
+            "<p>dưới 10tr không đóng thuế</p>\n" +
+            "<p>từ 10tr ->20tr thuế 5%</p>\n" +
+            "<p>từ 20tr ->30tr thuế 7%</p>\n" +
+            "<p>trên 30tr thuế 15%</p>\n" +
+            "\n" +
+            "<input type=\"number\" id=\"thuNhap\" placeholder=\"thu nhập cá nhân 'triệu'\">\n" +
+            "<button onclick=\"tien()\">ok</button>\n" +
+            "<p id=\"hienTien\"></p>")
+    }
+
+    function tien() {
+        let inputTien = +document.getElementById("thuNhap").value
+        if (inputTien <= 10) {
+            document.getElementById("hienTien").innerHTML = "bạn không phải đóng thuế"
+        } else if (inputTien > 10 && inputTien <= 20) {
+            document.getElementById("hienTien").innerHTML = "thu nhập của bạn là " + inputTien + " triệu số thế phải đóng là " + inputTien * 5 / 100 + "triệu đồng"
+        } else if (inputTien > 20 && inputTien <= 30) {
+            document.getElementById("hienTien").innerHTML = "thu nhập của bạn là " + inputTien + " triệu số thế phải đóng là " + inputTien * 7 / 100 + "triệu đồng"
+        } else {
+            document.getElementById("hienTien").innerHTML = "thu nhập của bạn là " + inputTien + " triệu số thế phải đóng là " + inputTien * 15 / 100 + "triệu đồng"
+        }
+    }
+
+    // bài 12
+    function bai12() {
+        document.write("" +
+            "<h1>lãi ngân hàng (lãi mẹ đẻ lãi con) </h1>\n" +
+            "<input type=\"number\" id=\"soTien\" placeholder=\"nhập số tiền gửi 'VND'\"><br>\n" +
+            "<input type=\"number\" id=\"soThang\" placeholder=\"số tháng gửi\"><br>\n" +
+            "<input type=\"number\" id=\"phanTramLai\" placeholder=\"lãi xuất\">\n" +
+            "<button onclick=\"nganHang()\">ok</button>\n" +
+            "<p id=\"laiXuat\"></p>")
+    }
+
+    function nganHang() {
+        let tien = parseInt(document.getElementById("soTien").value)
+        let inputLaiXuat = parseInt(document.getElementById("phanTramLai").value)
+        let thang = parseInt(document.getElementById("soThang").value)
+
+        let tienLai1 = tien * Math.pow((1 + inputLaiXuat / 100), thang)
+        let tienLai = parseInt(tienLai1)
+        document.getElementById("laiXuat").innerHTML =
+            "bạn gửi " + tien + " VND trong vòng " + thang + " tháng với lãi xuất " + inputLaiXuat +
+            "  % số tiền nhận được là " + tienLai + " VND"
+
+
+    }
+
+</script>

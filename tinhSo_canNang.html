@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Số cân nặng</title>
+</head>
+<body>
+
+</body>
+</html>
+ <script>
+   let canNang = +prompt("nhập cân nặng 'kg'");
+   let chieuCao = +prompt("nhập chiều cao 'm'");
+   let bmi = canNang/Math.pow(chieuCao,2);
+   bmi <18.5 ? alert("chỉ số BMI của bạn là "+ bmi +" quá gầy"):bmi<25.0 ? alert("chỉ số BMI của bạn là "+ bmi +" bình thường"): bmi <30.0 ? alert("chỉ số BMI của bạn là "+ bmi +" hơi béo"): alert("chỉ số BMI của bạn là "+ bmi +" quá béo")
+ </script>
