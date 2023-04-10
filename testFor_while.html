@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick="bai1()">bai1</button>
+<button onclick="bai2()">bai2</button>
+
+</body>
+</html>
+<script>
+    function bai1() {
+        for (let i = 1; i <=5 ; i++) {
+            console.log(i)
+
+        }
+    }
+    function bai2() {
+
+
+        let nhapSo = parseInt(prompt("nhap so"))
+        let tong = 0
+        if (nhapSo > 0) {
+            for (let i = 1; i <= nhapSo; i++) {
+                tong += i
+                console.log(tong)
+            }
+        }
+    }
+</script>
