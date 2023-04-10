@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick="tong()">tong cac so</button>
+<button onclick="hr()">the hr</button>
+
+</body>
+</html>
+<script>
+  function hr() {
+      let i = 1
+    while (i <= 1000){
+
+      document.write("<hr width="+i + "px >")
+        i++
+    }
+  }
+ function tong(){
+   let nhap = 0
+   let tong =0
+   while ( nhap != -1){
+     nhap = +prompt("nhap so")
+
+     tong += nhap
+     console.log(tong)
+   }
+ }
+</script>
