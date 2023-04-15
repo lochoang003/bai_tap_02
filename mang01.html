@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick="bai01()">bai1</button>
+<button onclick="bai2()">bai2,3</button>
+<button onclick="bai4()">bai4</button>
+<button onclick="bai5()">bai5</button>
+<button onclick="bai6()">bai6</button>
+<button onclick="bai7()">bai7</button>
+<button onclick="bai8()">bai8</button>
+<button onclick="bai9()">bai9</button>
+
+
+</body>
+</html>
+<script>
+    //bai 9
+    let bai=[]
+
+    let inPut
+    for (let i = 0; i < 10; i++) {
+        inPut = prompt("nhap 10 so dau")
+        bai.push(inPut)
+    }
+    let baiq =[]
+    for (let i = 0; i < 10; i++) {
+        inPut = prompt("nhap 10 so sau")
+        baiq.push(inPut)
+    }
+    let baiw =bai.concat(baiq)
+
+    console.log(baiw)
+
+
+
+
+    //bai8
+function bai8() {
+    let bai=[]
+    let inPut
+    for (let i = 0; i < 10; i++) {
+        inPut = prompt("nhap so")
+        bai.push(inPut)
+    }
+    bai.sort()
+    console.log(bai)
+}
+   /* let kq = []
+    let max = bai[0]
+    let d =true
+    for (let i = 0; i < bai.length; i++) {
+        if (max >= bai[i]){
+            max=bai[i]
+            kq.shift(max)
+        }
+
+    }*/
+
+
+
+
+    //bai7
+   function bai7() {
+       let bai=[]
+       let inPut
+       for (let i = 0; i < 10; i++) {
+           inPut = prompt("nhap so")
+           bai.push(inPut)
+       }
+       let check = prompt("nhap so can check")
+       for (let i = 0; i < bai.length; i++) {
+           if (bai[i] === check){
+               for (let j = i; j <bai.length ; j++) {
+                   bai[i]=bai[i+1]
+               }
+               bai[bai.length-1]=0
+
+           }
+       }
+       console.log(bai)
+   }
+
+
+
+    //bai6
+  function bai6() {
+      let bai = []
+      let input
+      for (let i = 0; i < 10; i++) {
+          input= prompt("nhap so")
+          bai.push(input)
+      }
+      alert(bai)
+      let check = prompt("nhap so can check")
+      let d = true
+      for (let i = 0; i < bai.length; i++) {
+          if (check!=bai[i]){
+              document.write(check +" k nam trong phan tu")
+              break
+          }
+      }if (d) {
+          document.write(check+"  nam trong phan tu")
+      }
+  }
+
+
+    //bai5
+   function bai5() {
+       let bai=[]
+       let inPut
+       let count = 0
+       do {
+           inPut= +prompt("nhap so ket thuc tai 1")
+           bai.push(inPut)
+           if (inPut < 0){
+               count++
+           }
+       }while (inPut>1||inPut<1)
+       document.write(count)
+
+   }
+
+    //bai4
+  function bai4() {
+      let bai = []
+      let inPut
+      do {
+          inPut= prompt("nhap ket thuc mang tai 8")
+          bai.push(inPut)
+      }while (inPut >=9 || inPut <= 7)
+      let nguoc = bai.reverse()
+      document.write(nguoc)
+
+  }
+
+    //bai2
+ function bai2() {
+        let dem=0
+     let count = 0
+     let bai=[]
+     for (let i = 0; i < 10; i++) {
+         let input = +prompt("nhap so")
+         bai.push(input)
+         count += bai[i]
+         dem ++
+
+     }
+
+     let max=bai[0]
+     for (let i = 0; i < bai.length; i++) {
+         if (max<bai[i]){
+             max=bai[i]
+         }
+
+     }
+     document.write( "gia tri max "+max +"<br>")
+     document.write("tb" + count/dem)
+
+ }
+
+    //bai1
+ function bai01() {
+     let bai1 = []
+     let count= 0
+     for (let i = 0; i <10 ; i++) {
+         let c = prompt("nhap so")
+         bai1[i] = c
+         if (bai1[i] > 10){
+             count++
+             document.write(bai1[i] +"<br>")
+         }
+     }
+     document.write(count)
+
+
+ }
+
+</script>
