@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick="bai4()">bai4</button>
+<button onclick="bai5()">bai5</button>
+<button onclick="bai7()">bai7</button>
+<button onclick="bai6()">bai6</button>
+<button onclick="bai8()">bai8</button>
+<button onclick="bai9()">bai9</button>
+
+</body>
+</html>
+<script>
+    //bai9
+    function bai9() {
+        f1()
+    }
+    function f1() {
+        let py=prompt("nhap do dai mang")
+        let arr = []
+        for (let i = 0; i < py; i++) {
+            arr.push(prompt("nhap ky tu"))
+        }
+        let check = prompt("check")
+        let count = 0
+        let c = true
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] === check){
+                count++
+                c = false
+            }
+        }
+        if (c){
+            alert(-1)
+        }else
+            alert(count)
+
+    }
+
+
+
+
+    //bai8
+    function bai8() {
+        qw()
+    }
+    function qw() {
+        let r= prompt("do dai mang")
+        let arr = []
+        for (let i = 0; i < r; i++) {
+            arr.push(prompt("nhap so"))
+        }
+        alert(arr)
+        let b = 1
+        for (let i = 0; i < arr.length/2; i++) {
+            let p = arr[i]
+            arr[i]=arr[arr.length-b]
+            arr[arr.length-b]=p
+            b++
+        }
+        alert(arr)
+    }
+
+
+
+
+    //bai6
+    function bai6() {
+        check1(+prompt("nhap 1 so"))
+    }
+    function check1(a) {
+        if (a>=0){
+            alert(true)
+        }
+        else
+            alert(false)
+    }
+
+
+
+    //bai7
+    function bai7() {
+        so(prompt("so thu 1"),prompt("so thu 2"))
+    }
+    function so(x,y) {
+        let t = x
+        x=y
+        y=t
+        alert(x)
+        alert(y)
+    }
+
+
+
+
+    //bai5
+    function bai5() {
+        soNguyen()
+    }
+
+    function soNguyen() {
+        let inPut = []
+        for (let i = 0; i < 3; i++) {
+            inPut.push(prompt())
+    }
+        let min = inPut[0]
+        for (let i = 1; i < inPut.length; i++) {
+            if (min>inPut[i]){
+                min = inPut[i]
+            }
+        }
+        alert(min)
+    }
+
+
+
+
+    //bai4
+
+function bai4() {
+    let input = +prompt()
+    check(input)
+}
+
+    function check(t) {
+       
+        if (t)
+            alert(true)
+        else
+            alert(false)
+    }
+
+
+</script>
